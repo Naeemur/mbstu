@@ -1,0 +1,17 @@
+.media {
+  width: auto;
+  height: auto;
+  margin: 0;
+  padding: 0;
+}
+.media video {
+  width: 100%;
+  height: auto;
+  margin: 0;
+  padding: 0;
+}
+.mejs-mediaelement video {
+  display: block;
+  width: 100%;
+  height: auto;
+}

@@ -1,0 +1,39 @@
+@media screen and (min-width: 851px) {
+  nav {
+    padding-top: 200px;
+  }
+  nav>ul {
+    position: relative;
+    float: right;
+    padding-right: 40px;
+  }
+  .container section>.center {
+    width: 70%;
+    float: left;
+    clear: left;
+  }
+  .container section>.left {
+    width: 30%;
+    float: right;
+    clear: none;
+  }
+  .container section>.right {
+    width: 30%;
+    float: right;
+    clear: right;
+  }
+  .container footer>div {
+    width: 25%;
+  }
+  .container footer>div:nth-child(3n) {
+    clear: none;
+  }
+  .cover>img {
+    top: 15px;
+    left: 15px;
+    margin-left: 0;
+  }
+  .cover>h1 {
+    margin: 35px 0;
+  }
+}

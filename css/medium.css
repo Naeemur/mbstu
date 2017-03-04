@@ -1,0 +1,28 @@
+@media screen and (min-width: 501px) {
+  nav {
+    padding-top: 150px;
+  }
+  .container section figure {
+    width: 45%;
+  }
+  .container section>.left {
+    width: 50%;
+    float: left;
+    clear: left;
+  }
+  .container section>.right {
+    width: 50%;
+    float: right;
+    clear: right;
+  }
+  .container footer {
+    margin-bottom: -5px;
+  }
+  .container footer>div {
+    width: 50%;
+    float: left;
+  }
+  .container footer>div:nth-child(3n) {
+    clear: left;
+  }
+}

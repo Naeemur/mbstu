@@ -1,0 +1,36 @@
+@media screen and (min-width: 851px)
+	nav 
+		// bottom 40px
+		padding-top 200px
+		&>ul
+			position relative
+			float right
+			padding-right 40px
+	.container
+		& section
+			// & figure
+			// 	width 45%
+			&>.center
+				width 70%
+				float left
+				clear left
+			&>.left 
+				width 30%
+				float right
+				clear none
+			&>.right
+				width 30%
+				float right
+				clear right
+		& footer
+			&>div
+				width 25%
+				&:nth-child(3n)
+					clear none
+	.cover
+		&>img
+			top 15px
+			left @top
+			margin-left 0
+		&>h1
+			margin 35px 0

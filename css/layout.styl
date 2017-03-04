@@ -1,0 +1,465 @@
+@import 'colors'
+
+.nd
+	display none
+
+#topBtn 
+	position fixed
+	width 40px
+	height @width
+	bottom 20px
+	right @bottom
+	cursor pointer
+	box-shadow 0 0 20px 0px #666
+	border-radius 30px
+	border none
+	background-image url(../assets/icons/icon-20.png)
+	background-repeat no-repeat
+	background-position 50% 50%
+	background-size auto
+	background-color c2
+	z-index 333
+	opacity 1
+	-webkit-transform-origin center center
+	-moz-transform-origin center center
+	-o-transform-origin center center
+	transform-origin center center
+	-webkit-transform scale(1, 1)
+	-moz-transform scale(1, 1)
+	-o-transform scale(1, 1)
+	transform scale(1, 1)
+	-webkit-transition all .5s ease
+	-moz-transition all .5s ease
+	-o-transition all .5s ease
+	transition all .5s ease
+	&.off 
+		opacity 0
+		cursor default
+		box-shadow 0 0 1px 0px #666
+		-webkit-transform scale(0, 0)
+		-moz-transform scale(0, 0)
+		-o-transform scale(0, 0)
+		transform scale(0, 0)			
+
+body 
+	overflow-x hidden
+
+.wrapper
+	position relative
+	overflow hidden
+	width 100%
+	height 100%
+	background #fff
+
+.container
+	position relative
+	margin 0 auto
+	width 100%
+	background #eee 
+	font-family /*"Gill Sans", "Gill Sans MT", Helvetica,*/ Arial, sans-serif
+	& h2 
+		font-weight 200
+		font-size 30px
+	& h3 
+		font-weight 300
+	& h4 
+		font-weight 400
+	& h2, & h3, & h4, & p
+		margin 0
+		padding 6px 16px
+	& p+h3, & p+h4
+		padding-top 15px
+	& h2, & h3, & h4
+		color c4
+		text-shadow 0 0 6px #aaa
+		clear both
+		text-transform capitalize
+	& footer
+		height auto
+		display inline-block
+		padding 20px
+		background #aaa
+		// &::after, &::before
+		// 	content ''
+		// 	display block
+		// 	clear both
+	& section p a, & footer a
+		color c2 
+		transition all .3s ease
+		border-radius 2px
+		cursor pointer
+	& footer a
+		color #fff
+	& section p a:hover
+		color #fff 
+		background-color c2
+		box-shadow 0 0 0 2px @background-color
+	& footer a:hover
+		color #222 
+		background-color c1
+		box-shadow 0 0 0 2px @background-color
+	& section
+		width 100%
+		height auto
+		clear both
+		padding 20px 0
+		// overflow auto
+		&:nth-of-type(1)
+			min-height 700px
+		&+hr
+			clear both
+			margin 15px 20px
+		& figure 
+			border none
+			color #888
+			font-size .9em
+			float right
+			line-height 1.15em
+			margin 16px
+			width auto
+			& a
+				display inline-block
+				box-shadow none
+				margin 0
+				padding 0
+				// border-radius 0 !important
+				height auto
+				line-height 0
+				&:hover
+					box-shadow 0 0 0 6px transparent
+					background transparent
+			& img 
+				height auto
+				width 100%
+				border-radius 5px
+				box-shadow 0 4px 20px 0 #777
+				-webkit-transition all .3s ease-out
+				-moz-transition all .3s ease-out
+				-o-transition all .3s ease-out
+				transition all .3s ease-out
+			&:hover img
+				box-shadow 0 8px 30px 0 #666
+				-webkit-transform translate(0,-7px)
+				-moz-transform translate(0,-7px)
+				-o-transform translate(0,-7px)
+				transform translate(0,-7px)
+			& figcaption 
+				display block
+				margin 8px 0
+				width 100%
+				text-align center
+		& iframe
+			width 100%
+			min-height 700px
+		&>.left, &>.right
+			& figure
+				width auto
+			& iframe
+				min-height 200px
+
+header
+	position relative 
+	background url(../assets/13.jpg) no-repeat center top
+	background-size cover
+	background-attachment fixed
+	z-index 88
+	height auto
+	
+.cover
+	position relative
+	top 0
+	left 0
+	width 100%
+	height auto
+	text-align center
+	overflow hidden
+	z-index 99
+	background rgba(c2,.4)
+	&>img
+		position absolute
+		width 60px
+		height @width
+		top 15px
+		left 50%
+		margin-left -30px
+		z-index 100
+	&>h1
+		position relative
+		text-shadow 0 0 7px #fff
+		text-transform uppercase
+		font-size 20px
+		font-weight 100
+		line-height @font-size
+		margin 90px 0 20px 0
+		padding 0 20px
+	&, &>img, &>h1
+		-webkit-transition all .8s ease
+		-moz-transition all .8s ease
+		-o-transition all .8s ease
+		transition all .8s ease
+		
+// css only menu
+nav 
+	background transparent
+	position relative
+	bottom 0
+	right 0
+	// padding 45px 0 0 180px
+	padding-top 0
+	// padding 0
+	width auto
+	min-height 40px
+	background-clip content-box
+	background-color rgba(c2,.4)
+	& li, & a
+		-webkit-transition all .5s ease
+		-moz-transition all .5s ease
+		-o-transition all .5s ease
+		transition all .5s ease
+	& ul
+		list-style none
+		margin 0 auto
+		padding 0
+		&::after
+			content ''
+			display block
+			clear both
+		& li:hover, & li:focus
+			background c2
+			&>ul
+				display block
+		& li a
+			cursor pointer
+			display inline-block
+			color #fff
+			font-size 16px
+			line-height 20px
+			padding 10px 20px
+			text-decoration none
+			width 125px
+			&:hover, &:focus
+				background c4
+		& ul
+			display none
+			position absolute
+			top 100%
+			background c2
+			& li
+				position relative
+			& ul
+				left 100%
+				top 0
+	// top level
+	&>ul
+		// padding-left 35px
+		width auto
+		&>li
+			float left
+			&>a
+				// padding 10px 20px 15px 20px
+				width auto
+	&>button, &>button:hover, &>button:active, &>button:focus
+		width 100%
+		height 40px
+		font-weight normal
+		outline none
+		border none
+		text-shadow none
+		background-color rgba(c1,.4)
+		background-image url(../assets/icons/icon-21.png)
+		background-repeat no-repeat
+		background-position 50% 50%
+		background-size auto
+		// background-color transparent
+		display none
+	&>button.open
+		// background-image url(../assets/icons/icon-20.png)
+		
+		
+// responsive menu
+// @media screen and (max-width: 750px)
+// 	nav 
+// 		// padding 70px 0 0 10px
+// 		&>ul
+// 			padding-left 0
+// 			padding-right 20px
+// 			&>li>a
+// 				padding 8px 12px 10px 12px 
+	
+.social
+	width 40px
+	height 40px
+	padding 0
+	margin 0
+	&, &:hover, &:focus
+		background-color transparent
+	& a, & a:hover, & a:focus 
+		width 40px
+		height 40px	
+		padding 0
+		margin 0
+		background-position 50% 50%
+		background-size auto
+		background-repeat no-repeat
+		background-color transparent
+		// -webkit-transition all .5s ease
+		// -moz-transition all .5s ease
+		// -o-transition all .5s ease
+		// transition all .5s ease
+		cursor pointer	
+	& .facebook 
+		background-image url(../assets/icons/icon-03.png)
+		&:hover 
+			background-image url(../assets/icons/icon-09.png)
+
+	& .twitter 
+		background-image url(../assets/icons/icon-31.png)
+		&:hover 
+			background-image url(../assets/icons/icon-32.png)
+
+@media screen and (max-width: 850px)
+	nav 
+		// position relative
+		// padding-top 200px
+		& ul
+			text-align center
+			display block
+			width 100%
+			& li
+				display block
+				width 100%
+				& a
+					width 100%
+					padding 10px 0
+					display block
+				& ul, &:hover ul
+					position relative
+					display none
+				&:focus ul, &:hover ul, & a:hover+ul, & a:focus+ul, & a:active+ul
+					display block
+			& .social
+				width 50%
+				& a, & a:focus, & a:hover
+					margin 0 20px
+				& .facebook
+					float right
+		&>button+ul 
+			display none
+		&>button, &>button:hover, &>button:active, &>button:focus
+			display block
+		&>button.open+ul
+			text-shadow 0 0 3px #222
+			background-color rgba(c1,.4)
+			display block
+			& ul
+				text-shadow none
+
+// 
+// wookmaark
+// 
+.progress-bar 
+	background-color #0BC20B
+	height 3px
+	position absolute
+	top 0
+	left 0
+	right 0
+	width 0
+	-webkit-box-shadow 0 1px 3px rgba(11, 194, 11, 0.2)
+	-moz-box-shadow 0 1px 3px rgba(11, 194, 11, 0.2)
+	box-shadow 0 1px 3px rgba(11, 194, 11, 0.2)
+	-webkit-transition width 0.1s ease-out
+	-moz-transition width 0.1s ease-out
+	-o-transition width 0.1s ease-out
+	transition width 0.1s ease-out
+
+// 
+// Placerholder css
+// 
+.wookmark-placeholder 
+	-webkit-border-radius 2px
+	-moz-border-radius 2px
+	border-radius 2px
+	background-color #eee
+	border 1px solid #dedede
+	z-index -1
+
+// 
+// Grid container
+// 
+.tiles-wrap 
+	position relative // Needed to ensure items are laid out relative to this container// /
+	margin 10px 0
+	padding 0
+	list-style-type none
+	display none
+
+// 
+// Grid items
+// 
+.tiles-wrap li 
+	display block
+	opacity 0
+	text-align center
+	list-style-type none
+	background-color #fff
+	float left
+	cursor pointer
+	width 200px
+	padding 4px
+	border 1px solid #dedede
+	-webkit-box-shadow 0 1px 3px rgba(0, 0, 0, 0.4)
+	-moz-box-shadow 0 1px 3px rgba(0, 0, 0, 0.4)
+	box-shadow 0 1px 3px rgba(0, 0, 0, 0.4)
+	-webkit-border-radius 2px
+	-moz-border-radius 2px
+	border-radius 2px
+
+.tiles-wrap.wookmark-initialised.animated li 
+	-webkit-transition all 0.3s ease-out
+	-moz-transition all 0.3s ease-out
+	-o-transition all 0.3s ease-out
+	transition all 0.3s ease-out
+
+.tiles-wrap.wookmark-initialised li 
+	opacity 1
+
+.tiles-wrap li.wookmark-inactive 
+	visibility hidden
+	opacity 0
+
+.tiles-wrap li:hover 
+	background-color #fafafa
+
+.tiles-wrap img 
+	display block
+
+.tiles-wrap a 
+	color #555
+	text-align center
+	// display table-cell// 
+	width 200px
+	height 200px
+	font-size 2em
+	font-weight bold
+	text-decoration none
+
+.tile-loading:after 
+	display block
+	position absolute
+	left 0
+	right 0
+	top 0
+	bottom 0
+	background-color #ddd
+	content "Loading\2026"
+	padding-top 20px
+	color #999
+
+@media screen and (max-width: 520px)
+	.slide p.pr a 
+		-webkit-transform scale(.6) translate(22px,-10px)
+		transform scale(.6) translate(22px,-10px)
+	.slide p a 
+		-webkit-transform scale(.6) translate(-22px,-10px)
+		transform scale(.6) translate(-22px,-10px)
